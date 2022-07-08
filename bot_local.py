@@ -111,7 +111,7 @@ def send_summary(message):
         # TO DO: perform calculation
         total_spent = int(df_campaign['spent'].sum())
         total_conversion = int(df_campaign['total_conversion'].sum())
-        cpc = (total_spent / total_conversion)
+        cpc = round(total_spent / total_conversion,1)
 
         # TO DO: subtitute text with variables
         with open('template_text/summary.txt', mode='r', encoding='utf-8') as f:
